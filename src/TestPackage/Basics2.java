@@ -29,6 +29,7 @@ public class Basics2 {
 	public void dummy()
 	{
 		System.out.println("Ashish");
+		System.out.println("Ashish2");
 		
 	}
 	
