@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel="tests" thread-count="2">
+ <parameter name = "URL" value="qaclick.com"/>
+
+<listeners>
+<listener class-name = "TestPackage.Listeners"/>
+</listeners>
+
+  <test name="Personal Loan">
+  <parameter name = "URL2" value="personal.com"/>
+  <parameter name = "APIKey" value="255768788"/>
+    <classes> 
+      <class name="TestPackage.Basics"/> 
+      <class name="TestPackage.Basics2"/> 
+      <class name ="TestPackage.Basics5"/>
+    </classes>
+  </test> 
+  
+  <test name="Car loan">
+  <classes>
+  <class name="TestPackage.Basics3">
+  <methods>
+  <exclude name ="mobile.*"/> 
+  </methods>
+  </class>  
+  </classes>
+ </test>
+ 
+  <test name="Home loan">
+  <parameter name = "URL1" value="home.com"/>
+  <classes>
+  <class name="TestPackage.Basics4">
+  <methods>
+  <include name="apilogin"/>
+  </methods>
+  </class>  
+  </classes>
+ </test>
+ 
+</suite> 
+

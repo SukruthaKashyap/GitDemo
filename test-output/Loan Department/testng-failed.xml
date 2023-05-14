@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Loan Department]" parallel="tests">
+  <parameter name="URL" value="qaclick.com"/>
+  <listeners>
+    <listener class-name="TestPackage.Listeners"/>
+  </listeners>
+  <test name="Personal Loan(failed)" parallel="tests">
+    <parameter name="APIKey" value="255768788"/>
+    <parameter name="URL2" value="personal.com"/>
+    <classes>
+      <class name="TestPackage.Basics">
+        <methods>
+          <include name="Demo4"/>
+          <include name="Wemo"/>
+          <include name="Demo3"/>
+          <include name="lastexecution"/>
+        </methods>
+      </class> <!-- TestPackage.Basics -->
+    </classes>
+  </test> <!-- Personal Loan(failed) -->
+</suite> <!-- Failed suite [Loan Department] -->
